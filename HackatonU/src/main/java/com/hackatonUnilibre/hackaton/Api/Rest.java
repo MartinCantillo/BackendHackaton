@@ -124,4 +124,30 @@ public class Rest {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
+
+    //Encontrar Productos by ID
+    @GetMapping("find/{id}")
+    private ResponseEntity<Producto> getProductoById(@PathVariable(name = "id") long id) {
+
+        Optional<Producto> producto = productoService.findById(id);
+
+        if (producto.isPresent()) {
+            Producto c = producto.get();
+
+            return ResponseEntity.ok(c);
+        } else {
+
+            return ResponseEntity.notFound().build();
+
+        }
+
+    }
+
+    //Encontrar Productos 
+    @GetMapping("/find")
+    private ResponseEntity<Iterable<Producto>> getProductos() {
+
+        return ResponseEntity.ok(productoService.findAll());
+    }
+
 }
