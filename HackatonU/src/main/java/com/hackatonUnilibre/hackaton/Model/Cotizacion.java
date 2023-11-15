@@ -4,6 +4,8 @@
  */
 package com.hackatonUnilibre.hackaton.Model;
 
+import com.hackatonUnilibre.hackaton.Model.Cliente;
+import com.hackatonUnilibre.hackaton.Model.Asesor;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
