@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 public class Asesor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     private long codigoAsesor;
     private String nombreAsesor;
     private String apellidoAsesor;

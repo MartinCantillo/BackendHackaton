@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,7 +27,7 @@ public class Paquete {
 
     @Id
     //autoIncrementable
-    @GeneratedValue(strategy = GenerationType.AUTO)
+   // @GeneratedValue(strategy = GenerationType.AUTO)
     private long codigoPaquete;
     private String descripcionPaquete;
     private int paqueteDisponible;
@@ -34,6 +35,7 @@ public class Paquete {
     private double precioPaquete;
     //Relacion 1 a N con productos
     @ManyToOne
+     @JoinColumn(name = "productoFK")
     private Producto producto;
     
 }

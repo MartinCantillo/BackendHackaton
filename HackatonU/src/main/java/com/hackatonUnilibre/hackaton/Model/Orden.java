@@ -4,10 +4,12 @@
  */
 package com.hackatonUnilibre.hackaton.Model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
@@ -27,13 +29,15 @@ public class Orden {
 
     @Id
     //autoIncrementable
-    @GeneratedValue(strategy = GenerationType.AUTO)
+  //  @GeneratedValue(strategy = GenerationType.AUTO)
     private long codigoOrden;
     private String descripcionOrden;
     private int estadoOrden;
     private int fechaOrden;
     private double precioPaquete;
     //Relacion 1 a 1 con productos
-    @OneToOne
-    private Producto producto;
+   @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "CotizacionFK", referencedColumnName = "codigoCotizacion")
+    private Cotizacion cotizacion;
 }
+	

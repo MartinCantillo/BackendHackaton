@@ -10,6 +10,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,15 +28,18 @@ import lombok.NoArgsConstructor;
 public class Cotizacion {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+   // @GeneratedValue(strategy = GenerationType.AUTO)
     private long codigoCotizacion;
     private String descripcionCotizacion;
     private String fechaCotizacion;
     private double subTotal;
     private double descuento;
     private double montoTotal;
+    
     @ManyToOne
+    @JoinColumn(name = "clienteFK")
     private Cliente cliente;
     @ManyToOne
+    @JoinColumn(name = "asesorFK")
     private Asesor asesor;
 }
