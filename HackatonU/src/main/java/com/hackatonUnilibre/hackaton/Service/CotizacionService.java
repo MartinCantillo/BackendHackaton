@@ -56,8 +56,7 @@ public class CotizacionService implements CotizacionRepository {
 
     @Override
     public void deleteById(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+cotizacionRepository.deleteById(id);    }
 
     @Override
     public void delete(Cotizacion entity) {
@@ -66,8 +65,7 @@ public class CotizacionService implements CotizacionRepository {
 
     @Override
     public void deleteAllById(Iterable<? extends Long> ids) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+cotizacionRepository.deleteAllById(ids);    }
 
     @Override
     public void deleteAll(Iterable<? extends Cotizacion> entities) {

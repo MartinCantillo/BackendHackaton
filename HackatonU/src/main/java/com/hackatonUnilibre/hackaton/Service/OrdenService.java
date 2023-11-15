@@ -66,8 +66,7 @@ public class OrdenService implements OrdenRepository {
 
     @Override
     public void deleteAllById(Iterable<? extends Long> ids) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+ordenRepository.deleteAllById(ids);    }
 
     @Override
     public void deleteAll(Iterable<? extends Orden> entities) {

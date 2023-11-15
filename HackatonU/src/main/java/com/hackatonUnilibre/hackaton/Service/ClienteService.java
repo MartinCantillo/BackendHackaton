@@ -39,13 +39,11 @@ return clienteRepository.findById(id);    }
 
     @Override
     public Iterable<Cliente> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+return clienteRepository.findAll();    }
 
     @Override
     public Iterable<Cliente> findAllById(Iterable<Long> ids) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+return clienteRepository.findAllById(ids);    }
 
     @Override
     public long count() {
@@ -63,8 +61,7 @@ clienteRepository.deleteById(id);  }
 
     @Override
     public void deleteAllById(Iterable<? extends Long> ids) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+clienteRepository.deleteAllById(ids);    }
 
     @Override
     public void deleteAll(Iterable<? extends Cliente> entities) {
