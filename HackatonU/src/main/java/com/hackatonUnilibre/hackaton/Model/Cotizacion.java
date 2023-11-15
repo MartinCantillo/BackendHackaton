@@ -4,10 +4,36 @@
  */
 package com.hackatonUnilibre.hackaton.Model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  *
  * @author marti
  */
+//Get and sett furthermore Constructors
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Entity
 public class Cotizacion {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long codigoCotizacion;
+    private String descripcionCotizacion;
+    private String fechaCotizacion;
+    private double subTotal;
+    private double descuento;
+    private double montoTotal;
+    @ManyToOne
+    private Cliente cliente;
+    @ManyToOne
+    private Asesor asesor;
 }
