@@ -4,10 +4,14 @@
  */
 package com.hackatonUnilibre.hackaton.Repository;
 
+import com.hackatonUnilibre.hackaton.Model.Asesor;
+import com.hackatonUnilibre.hackaton.Model.Orden;
+import org.springframework.data.repository.CrudRepository;
+
 /**
  *
  * @author marti
  */
-public interface OrdenRepository {
+public interface OrdenRepository  extends CrudRepository<Orden, Long>{
     
 }

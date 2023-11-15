@@ -4,10 +4,13 @@
  */
 package com.hackatonUnilibre.hackaton.Repository;
 
+import com.hackatonUnilibre.hackaton.Model.Producto;
+import org.springframework.data.repository.CrudRepository;
+
 /**
  *
  * @author marti
  */
-public interface ProductoRepository {
-    
+public interface ProductoRepository extends CrudRepository<Producto, Long> {
+
 }

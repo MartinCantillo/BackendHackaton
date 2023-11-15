@@ -4,10 +4,13 @@
  */
 package com.hackatonUnilibre.hackaton.Repository;
 
+import com.hackatonUnilibre.hackaton.Model.Asesor;
+import org.springframework.data.repository.CrudRepository;
+
 /**
  *
  * @author marti
  */
-public interface AsesorRepository {
+public interface AsesorRepository extends CrudRepository<Asesor, Long> {
     
 }

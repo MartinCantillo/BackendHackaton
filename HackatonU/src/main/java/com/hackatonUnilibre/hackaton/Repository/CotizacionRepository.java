@@ -4,10 +4,14 @@
  */
 package com.hackatonUnilibre.hackaton.Repository;
 
+import com.hackatonUnilibre.hackaton.Model.Asesor;
+import com.hackatonUnilibre.hackaton.Model.Cotizacion;
+import org.springframework.data.repository.CrudRepository;
+
 /**
  *
  * @author marti
  */
-public interface CotizacionRepository {
+public interface CotizacionRepository  extends CrudRepository<Cotizacion, Long>{
     
 }

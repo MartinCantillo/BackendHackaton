@@ -4,10 +4,13 @@
  */
 package com.hackatonUnilibre.hackaton.Repository;
 
+import com.hackatonUnilibre.hackaton.Model.Paquete;
+import org.springframework.data.repository.CrudRepository;
+
 /**
  *
  * @author marti
  */
-public interface PaqueteRepository {
+public interface PaqueteRepository extends CrudRepository<Paquete, Long>{
     
 }
